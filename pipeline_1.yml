@@ -1,0 +1,27 @@
+trigger:
+  - main
+
+pool:
+  VMImage: ubuntu-latest
+
+stages:
+- stage: Build
+  displayName: First_stage
+  jobs:
+  - job: job1
+    displayName: Stage_1_First_Job
+    steps:
+    - script: echo "Running stage_1_First_Job"
+  - job: job2
+    displayName: Stage_1_Second_Job
+    steps:
+    - script: echo "Running Stage_1_Second_Job"
+  - job: job3
+    displayName: Stage_1_Third_Job
+    steps:
+    - script: echo "Running Stage_1_Third_Job"
+
+# - stage: Build_2
+#   displayName: Second_stage
+# -stage: Build_3
+#   displayName: Third_Stage
